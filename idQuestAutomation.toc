@@ -1,4 +1,4 @@
-## Interface: 40000
+## Interface: 50001
 ## Title: idQuestAutomation
 ## Notes: Skips social dialogue, automates quest accepting/turning in.
 ## Author: Industrial

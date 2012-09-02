@@ -33,6 +33,7 @@ function addon:QUEST_LOG_UPDATE ()
   local title
   local is_complete
   local no_objectives
+  local _
 
   self.completed_quests = {}
   self.incomplete_quests = {}
@@ -65,7 +66,6 @@ function addon:GOSSIP_SHOW ()
     button = _G['GossipTitleButton' .. i]
     if button:IsVisible() then
       text = self:strip_text(button:GetText())
-      ABCDE={button:GetText(), text}
       if button.type == 'Available' then
         button:Click()
       elseif button.type == 'Active' then
@@ -122,6 +122,4 @@ addon:RegisterEvent('QUEST_FINISHED')
 addon:RegisterEvent('QUEST_GREETING')
 addon:RegisterEvent('QUEST_LOG_UPDATE')
 addon:RegisterEvent('QUEST_PROGRESS')
-
-_G.idQuestAutomation = addon
 
